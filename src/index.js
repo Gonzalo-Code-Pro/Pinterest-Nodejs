@@ -1,8 +1,6 @@
 const { app, BrowserWindow, Menu, ipcMain } = require("electron");
-
 const url = require("url");
 const path = require("path");
-
 let mainWindow;
 let newProductWindow;
 
@@ -12,7 +10,7 @@ if (process.env.NODE_ENV !== "production") {
     electron: path.join(__dirname, "../node_modules", ".bin", "electron"),
   });
 }
-
+//empezando
 app.on("ready", () => {
   // The Main Window
   mainWindow = new BrowserWindow({ width: 720, height: 600 });
@@ -26,6 +24,7 @@ app.on("ready", () => {
   );
 
   // Menu
+
   const mainMenu = Menu.buildFromTemplate(templateMenu);
   // Set The Menu to the Main Window
   Menu.setApplicationMenu(mainMenu);
